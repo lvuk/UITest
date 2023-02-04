@@ -13,10 +13,11 @@ public class WebshopPage {
     By usernameTextBox = By.id("user-name");
     By passwordTextBox = By.id("password");
     By loginBtn = By.id("login-button");
-    public void login(){
+    public String login(){
         driver.findElement(usernameTextBox).sendKeys("standard_user");
         driver.findElement(passwordTextBox).sendKeys("secret_sauce");
         driver.findElement(loginBtn).click();
+        return driver.getCurrentUrl();
     }
 
     By backpackAddToCartBtn = By.id("add-to-cart-sauce-labs-backpack");
