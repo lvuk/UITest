@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="AllTestsSuite">
-    <test name="My First Selenium TestNG Test">
+<suite name="AllTestsSuite" parallel="tests">
+    <test name="First Test">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="TestMethods"/>
         </classes>
     </test>
+
+    <test name="Second Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestMethods"/>
+        </classes>
+    </test>
+
+    <!-- IF YOU WANT ANOTHER TEST IN IE BROWSER JUST ADD ONE MORE TEST-->
+
+<!--    <test name="Third Test">-->
+<!--        <parameter name="browser" value="ie"/>-->
+<!--        <classes>-->
+<!--            <class name="TestMethods"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
