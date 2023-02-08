@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="AllTestsSuite">
     <test name="My First Selenium TestNG Test">
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="TestMethods"/>
         </classes>
